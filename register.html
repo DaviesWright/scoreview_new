@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register &amp; Launch ScoReviewHR | ScoreView</title>
+  <meta name="description" content="Register your organization or employee profile for ScoReviewHR and launch directly into the live ScoReviewHR Workforce & Performance Management portal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/config.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><span class="nav-logo-icon">◆</span> ScoreView</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/#platform">Platform</a></li>
+        <li><a href="/scoReviewHR.html">ScoReviewHR</a></li>
+        <li><a href="/scoReview.html">ScoReview</a></li>
+        <li><a href="/how-it-works.html">How It Works</a></li>
+        <li><a href="/register.html" class="active">Register (ScoReviewHR)</a></li>
+        <li><a href="https://staging.bscscoreview.com/login" target="_blank" rel="noopener">ScoReviewHR Login ↗</a></li>
+        <li><a href="/request-demo.html" class="nav-cta" data-cta="demo">Request Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <span class="hero-badge">Live Platform Registration &amp; Portal Access</span>
+      <h1>Register for ScoReviewHR</h1>
+      <p>Create your ScoReviewHR workspace registration and generate your direct sign-in link to the live ScoReviewHR Workforce &amp; Performance Management platform.</p>
+      <div class="hero-ctas" style="justify-content: center; margin-top: 1.5rem;">
+        <a href="https://staging.bscscoreview.com/login" class="btn btn-primary" target="_blank" rel="noopener">
+          Already Registered? Sign In to ScoReviewHR ↗
+        </a>
+        <a href="#registration-form" class="btn btn-secondary">
+          Complete New Registration ↓
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Registration & Instant Link Generation -->
+  <section id="registration-form">
+    <div class="container">
+      <div class="product-grid" style="align-items: start;">
+        <!-- Left Column: Registration Form -->
+        <div class="form-section" style="margin: 0; max-width: 100%;">
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.35rem;">1. Workspace &amp; User Registration</h3>
+          <p style="color: var(--color-text-muted, #94a3b8); font-size: 0.92rem; margin-bottom: 1.5rem;">
+            Enter your details below to register for ScoReviewHR and generate your personalized portal access link.
+          </p>
+
+          <!-- Generated Link Card (Shown immediately on submit) -->
+          <div id="registrationGeneratedCard" class="form-success" style="padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.4rem;">
+              ✓ ScoReviewHR Registration Complete!
+            </div>
+            <p id="registrationSummaryText" style="font-size: 0.9rem; margin-bottom: 0.85rem; line-height: 1.5;">
+              Your profile has been registered. Click your generated portal link below to launch ScoReviewHR:
+            </p>
+            <div style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(59, 130, 246, 0.45); border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 1rem; word-break: break-all; font-family: monospace; font-size: 0.85rem;">
+              <a id="generatedPortalLink" href="https://staging.bscscoreview.com/login" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: underline;">
+                https://staging.bscscoreview.com/login
+              </a>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a id="generatedPortalButton" href="https://staging.bscscoreview.com/login" target="_blank" rel="noopener" class="btn btn-primary">
+                Launch ScoReviewHR Portal Now ↗
+              </a>
+            </div>
+          </div>
+
+          <form id="scoreviewHrRegisterForm" data-form="scoreviewhr-registration">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="regFirstName">First Name *</label>
+                <input type="text" id="regFirstName" name="firstName" placeholder="e.g. Kwame" required>
+              </div>
+              <div class="form-group">
+                <label for="regLastName">Last Name *</label>
+                <input type="text" id="regLastName" name="lastName" placeholder="e.g. Mensah" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="regEmail">Work Email *</label>
+              <input type="email" id="regEmail" name="email" placeholder="you@organization.com" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="regOrganization">Organization *</label>
+                <input type="text" id="regOrganization" name="organization" placeholder="e.g. Senrab ConsulTech" required>
+              </div>
+              <div class="form-group">
+                <label for="regDepartment">Department *</label>
+                <input type="text" id="regDepartment" name="department" placeholder="e.g. People &amp; Culture" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="regPersona">ScoReviewHR Access Role *</label>
+                <select id="regPersona" name="role" required>
+                  <option value="hr_director">HR Director / Executive</option>
+                  <option value="hr_admin">HR Operations Admin</option>
+                  <option value="line_manager">Line Manager / Squad Lead</option>
+                  <option value="employee">Employee Self-Service (ESS)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="regHub">Primary Hub</label>
+                <select id="regHub" name="hub">
+                  <option value="Accra">Accra Hub (Ghana)</option>
+                  <option value="London">London Hub (UK)</option>
+                  <option value="Hybrid">Hybrid / Global Remote</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="regNotes">Key Priorities (Optional)</label>
+              <textarea id="regNotes" name="message" placeholder="e.g. Cascading BSC KPIs, 9-Box Talent Calibration, Leave &amp; Shift Rosters..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              Complete Registration &amp; Generate ScoReviewHR Link →
+            </button>
+            <p class="form-note">
+              Already have an account? <a href="https://staging.bscscoreview.com/login" target="_blank" rel="noopener">Go directly to ScoReviewHR Sign-In ↗</a>
+            </p>
+          </form>
+        </div>
+
+        <!-- Right Column: Direct ScoReviewHR Portal Overview & Instant Access -->
+        <div class="product-card product-card-featured" style="margin: 0;">
+          <div class="product-tag">Live Cloud Platform</div>
+          <h3>ScoReviewHR Portal</h3>
+          <p class="product-tagline">Senrab ConsulTech Workforce &amp; Performance Management</p>
+          <p class="product-desc">
+            ScoReviewHR combines pre-appraisal KPI assurance and Balanced Scorecard cascading with full Employee Self-Service (ESS), Shift Rosters, Multi-Tier Approvals, and the unified Dede AI Guided Copilot.
+          </p>
+          <ul class="product-features">
+            <li>✓ <strong>Cascading Balanced Scorecard (BSC)</strong> — Financial, Customer, Internal Process &amp; Learning weights</li>
+            <li>✓ <strong>HR Appraisal Review Board &amp; 9-Box Grid</strong> — Executive calibration and bias elimination</li>
+            <li>✓ <strong>8-Pillar Employee Self-Service (ESS)</strong> — Total Rewards Wallet, AI Letters &amp; Wins Journal</li>
+            <li>✓ <strong>Time, Leave &amp; Biometric Shift Rosters</strong> — Accra &amp; London hub schedules and 1-click remote work</li>
+            <li>✓ <strong>Multi-Tier Approval Workflows</strong> — Maker-Checker SLA routing across 5 authorization pipelines</li>
+            <li>✓ <strong>Unified Dede AI &amp; Follow the Prompt (⌘J)</strong> — Contextual 5-step role guide &amp; conversational copilot</li>
+          </ul>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+            <a href="https://staging.bscscoreview.com/login" target="_blank" rel="noopener" class="btn btn-primary" style="text-align: center;">
+              Open Live ScoReviewHR Application ↗
+            </a>
+            <a href="/scoReviewHR.html" class="btn btn-outline" style="text-align: center;">
+              Read ScoReviewHR Module Specification
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">◆ ScoreView</div>
+          <p class="footer-desc">Performance intelligence and governance platform. Built by PeopleOptix and Senrab ConsulTech.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <a href="/scoReviewHR.html">ScoReviewHR</a>
+          <a href="/register.html">Register for ScoReviewHR</a>
+          <a href="https://staging.bscscoreview.com/login" target="_blank" rel="noopener">ScoReviewHR Portal Login ↗</a>
+          <a href="/scoReview.html">ScoReview</a>
+          <a href="/how-it-works.html">How It Works</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="/contact.html">Contact</a>
+          <a href="/request-demo.html">Request Demo</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/security.html">Security</a>
+        </div>
+        <div class="footer-col">
+          <h5>For You</h5>
+          <a href="/#insights">For HR Leaders</a>
+          <a href="/#insights">For Business Leaders</a>
+          <a href="/request-demo.html">Maturity Assessment</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 ScoreView. All rights reserved. Powered by Cloudflare.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dede AI Assistant -->
+  <div class="dede-widget" id="dedeWidget">
+    <button class="dede-toggle" id="dedeToggle" aria-label="Open Dede AI Assistant">
+      <div class="dede-avatar">D</div>
+    </button>
+    <div class="dede-panel" id="dedePanel">
+      <div class="dede-header">
+        <div class="dede-header-avatar">D</div>
+        <div class="dede-header-info">
+          <div class="dede-header-name">Dede</div>
+          <div class="dede-header-status">AI Assistant · Online</div>
+        </div>
+        <button class="dede-close" id="dedeClose" aria-label="Close">✕</button>
+      </div>
+      <div class="dede-messages" id="dedeMessages">
+        <div class="dede-message dede-message-bot">
+          <div class="dede-message-content">Hi! I'm Dede. Register here to generate your direct access link to ScoReviewHR (`https://staging.bscscoreview.com/login`), or click "Sign In to ScoReviewHR" if you already have an account!</div>
+        </div>
+      </div>
+      <div class="dede-quick" id="dedeQuick">
+        <button class="dede-quick-btn" data-q="How do I access ScoReviewHR?">How do I access ScoReviewHR?</button>
+        <button class="dede-quick-btn" data-q="What roles are available in ScoReviewHR?">What roles are available?</button>
+        <button class="dede-quick-btn" data-q="How does KPI validation work?">How does KPI validation work?</button>
+      </div>
+      <div class="dede-input">
+        <input type="text" id="dedeInput" placeholder="Ask Dede anything..." aria-label="Ask Dede">
+        <button id="dedeSend" aria-label="Send">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/dede-assistant.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>

@@ -19,7 +19,9 @@ export async function onRequestPost({ request, env }) {
     const formType = data._formType || (firstName ? 'demo-request' : 'contact');
 
     // Build email content
-    const emailSubject = formType === 'demo-request'
+    const emailSubject = formType === 'scoreviewhr-registration'
+      ? `New ScoReviewHR Registration — ${fullName} (${organization || 'Unknown'})`
+      : formType === 'demo-request'
       ? `New Demo Request — ${fullName} (${organization || 'Unknown'})`
       : `New Contact Message — ${fullName}`;
 

@@ -48,6 +48,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Try API submission (unified endpoint)
       data._formType = formType;
+
+      if (formType === 'scoreviewhr-registration') {
+        var generatedCard = document.getElementById('registrationGeneratedCard');
+        var generatedLink = document.getElementById('generatedPortalLink');
+        var generatedBtn = document.getElementById('generatedPortalButton');
+        var summaryText = document.getElementById('registrationSummaryText');
+        var basePortalUrl = 'https://staging.bscscoreview.com/login';
+        var params = new URLSearchParams();
+        if (data.email) params.set('email', data.email);
+        if (data.role) params.set('role', data.role);
+        if (data.organization) params.set('org', data.organization);
+        var fullPortalUrl = params.toString() ? (basePortalUrl + '?' + params.toString()) : basePortalUrl;
+
+        if (generatedLink) {
+          generatedLink.href = fullPortalUrl;
+          generatedLink.textContent = fullPortalUrl;
+        }
+        if (generatedBtn) {
+          generatedBtn.href = fullPortalUrl;
+        }
+        if (summaryText && data.firstName) {
+          summaryText.textContent = 'Welcome, ' + data.firstName + '! Your ScoReviewHR registration for ' + (data.organization || 'your organization') + ' is ready. Use your generated link below to sign in to ScoReviewHR:';
+        }
+        if (generatedCard) {
+          generatedCard.classList.add('show');
+          generatedCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
       fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -55,6 +84,10 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .then(function(r) { return r.ok ? r.json() : Promise.reject(); })
       .then(function() {
+        if (formType === 'scoreviewhr-registration') {
+          form.reset();
+          return;
+        }
         if (successEl) {
           successEl.classList.add('show');
           form.reset();
@@ -62,6 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       })
       .catch(function() {
+        if (formType === 'scoreviewhr-registration') {
+          form.reset();
+          return;
+        }
         // Fallback: mailto
         if (successEl) {
           successEl.classList.add('show');

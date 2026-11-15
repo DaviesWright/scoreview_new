@@ -19,9 +19,13 @@ const SCOREVIEW_CONFIG = {
       text: "Start the Assessment",
       url: "/request-demo.html"
     },
+    register: {
+      text: "Register for ScoReviewHR",
+      url: "/register.html"
+    },
     login: {
-      text: "Client Login",
-      url: "https://hr.bscscoreview.com"
+      text: "ScoReviewHR Login",
+      url: "https://staging.bscscoreview.com/login"
     }
   },
 
