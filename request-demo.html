@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Demo — ScoreView</title>
+  <meta name="description" content="Request a personalized demo of ScoreView. See KPI validation, appraisal review, moderation, and strategic alignment in action.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/config.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><span class="nav-logo-icon">◆</span> ScoreView</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/#platform">Platform</a></li>
+        <li><a href="/scoReviewHR.html">ScoReviewHR</a></li>
+        <li><a href="/scoReview.html">ScoReview</a></li>
+        <li><a href="/how-it-works.html">How It Works</a></li>
+        <li><a href="/#insights">Insights</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/request-demo.html" class="nav-cta active" data-cta="demo">Request Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Request a Demo</h1>
+      <p>See ScoreView in action with a personalized walkthrough. We'll tailor the demo to your organization's performance management context.</p>
+    </div>
+  </header>
+
+  <!-- Form -->
+  <section>
+    <div class="container">
+      <div class="form-section">
+        <div class="form-success">Thank you! Your demo request has been received. Our team will contact you within 24 hours to schedule your personalized walkthrough.</div>
+        <form data-form="demo-request">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="organization">Organization *</label>
+            <input type="text" id="organization" name="organization" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="role">Your Role</label>
+              <select id="role" name="role">
+                <option value="">Select...</option>
+                <option value="hr-leader">HR Leader / CHRO</option>
+                <option value="people-ops">People Operations</option>
+                <option value="business-leader">Business Leader / CEO</option>
+                <option value="consultant">HR Consultant</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="orgSize">Organization Size</label>
+              <select id="orgSize" name="orgSize">
+                <option value="">Select...</option>
+                <option value="50-200">50–200 employees</option>
+                <option value="200-500">200–500 employees</option>
+                <option value="500-1000">500–1,000 employees</option>
+                <option value="1000+">1,000+ employees</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="interest">Which module interests you?</label>
+            <select id="interest" name="interest">
+              <option value="">Select...</option>
+              <option value="scoReviewHR">ScoReviewHR (Pre-Appraisal)</option>
+              <option value="scoReview">ScoReview (Post-Appraisal)</option>
+              <option value="both">Both modules</option>
+              <option value="maturity">Performance Maturity Assessment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your performance management challenges</label>
+            <textarea id="message" name="message" placeholder="What are you looking to improve? What tools do you currently use?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Request Demo</button>
+          <p class="form-note">By submitting this form, you agree to be contacted by the ScoreView team. We respect your privacy — see our <a href="/privacy.html">Privacy Policy</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section style="background: var(--color-bg-alt); border-top: 1px solid var(--color-border);">
+    <div class="container">
+      <h2 class="section-title">What to expect</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Personalized Walkthrough</h3>
+          <p>A 45-minute session tailored to your organization. We'll show the modules most relevant to your needs.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Your Data, Our Platform</h3>
+          <p>Bring a sample scorecard or appraisal — we'll run it through validation and show you the results live.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>24-Hour Response</h3>
+          <p>We'll contact you within one business day to schedule your demo at a time that works for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">◆ ScoreView</div>
+          <p class="footer-desc">Performance intelligence and governance platform. Built by PeopleOptix and Senrab ConsulTech.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <a href="/scoReviewHR.html">ScoReviewHR</a>
+          <a href="/scoReview.html">ScoReview</a>
+          <a href="/how-it-works.html">How It Works</a>
+          <a href="/#platform">Framework</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="/contact.html">Contact</a>
+          <a href="/request-demo.html">Request Demo</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/security.html">Security</a>
+        </div>
+        <div class="footer-col">
+          <h5>For You</h5>
+          <a href="/#insights">For HR Leaders</a>
+          <a href="/#insights">For Business Leaders</a>
+          <a href="/request-demo.html">Maturity Assessment</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 ScoreView. All rights reserved. Powered by Cloudflare.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dede AI Assistant -->
+  <div class="dede-widget" id="dedeWidget">
+    <button class="dede-toggle" id="dedeToggle" aria-label="Open Dede AI Assistant">
+      <div class="dede-avatar">D</div>
+    </button>
+    <div class="dede-panel" id="dedePanel">
+      <div class="dede-header">
+        <div class="dede-header-avatar">D</div>
+        <div class="dede-header-info">
+          <div class="dede-header-name">Dede</div>
+          <div class="dede-header-status">AI Assistant · Online</div>
+        </div>
+        <button class="dede-close" id="dedeClose" aria-label="Close">✕</button>
+      </div>
+      <div class="dede-messages" id="dedeMessages">
+        <div class="dede-message dede-message-bot">
+          <div class="dede-message-content">Hi! I'm Dede. Need help deciding which module is right for you? I can explain the differences between ScoReviewHR and ScoReview, or answer any questions before your demo.</div>
+        </div>
+      </div>
+      <div class="dede-quick" id="dedeQuick">
+        <button class="dede-quick-btn" data-q="Which module should I choose?">Which module should I choose?</button>
+        <button class="dede-quick-btn" data-q="What happens in the demo?">What happens in the demo?</button>
+        <button class="dede-quick-btn" data-q="How long is the demo?">How long is the demo?</button>
+      </div>
+      <div class="dede-input">
+        <input type="text" id="dedeInput" placeholder="Ask Dede anything..." aria-label="Ask Dede">
+        <button id="dedeSend" aria-label="Send">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/dede-assistant.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>
